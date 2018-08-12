@@ -1,11 +1,11 @@
-let userInput = 'rock'
+let userInput = prompt ("Choose your weapon...rock, paper, or scissors")
  userInput = userInput.toLowerCase();
 
 //random choice from comp
 function getComputerChoice(){
   let randomNumber =
       Math.floor(Math.random()*3);
-	switch(randomNumber) {
+  switch(randomNumber) {
     case 0:
       return('rock');
       break;
@@ -56,10 +56,9 @@ if(userChoice === 'paper'){
 function playGame(){
   let userChoice = userInput;
   let computerChoice = getComputerChoice();
-	console.log(`You chose ${userChoice}`)
-	console.log(`The computer chose ${computerChoice}`)
-  console.log(determineWinner(userChoice, computerChoice));
-  
-  }
-  
-  playGame()
+  console.log(`You chose ${userChoice}`); 
+  alert(`The computer chose ${computerChoice}`);
+  alert(determineWinner(userChoice, computerChoice)); 
+}      
+        
+playGame();
